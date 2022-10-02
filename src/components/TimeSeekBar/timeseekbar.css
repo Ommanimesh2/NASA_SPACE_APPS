@@ -1,0 +1,17 @@
+.timeseekbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50vw;
+    margin-left: 400px;
+    align-items: center;
+    padding: 20px;
+
+
+}
+.range{
+    width: 700px;
+}
+.text{
+    width: 100px;
+}

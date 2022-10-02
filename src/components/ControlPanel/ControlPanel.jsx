@@ -6,12 +6,14 @@ import { useContext } from 'react'
 import DashToggle from '../SlidingButtons/DashToggle'
 import dataContext from '../../datacontext'
 import './controlpanel.css'
+
 const ControlPanel = () => {
 
 
 
 return (
     <div className='controlpanel'>
+      
       <Odometer/>
       <SpeedoMeter/>
       <DashToggle/>

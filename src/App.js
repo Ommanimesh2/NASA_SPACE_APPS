@@ -8,11 +8,12 @@ import Dashboard from './components/Dashboard/Dashboard';
 function App() {
   const {globalData,setGlobalData,showDashboard}=useContext(dataContext)
   return (
-    <>
+<>
    <SolarSunDisplay/>
    <ControlPanel/>
    {showDashboard ? <Dashboard/> :<></>}  
-   </>
+</>
+
   );
 } 
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import dataContext from '../../datacontext'
 import { useContext } from 'react'
-
+import './timeseekbar.css'
 const TimeSeekBar = ({gData}) => {
     const {globalData,setGlobalData,on,setOn}=useContext(dataContext)
     const [range,setRange] = useState(0)
@@ -31,9 +31,9 @@ const TimeSeekBar = ({gData}) => {
 
   
    return (
-    <div>
-        <input type="range" name="range" id="myProgressBar" min="0" max="30670" onChange={handleChange}/>
-        <input type="text" name=""  value={range} id="" />
+    <div className='timeseekbar'>
+        <input className='range' type="range" name="range" id="myProgressBar" min="0" max="30670" onChange={handleChange}/>
+        <input className='text' type="text" name=""  value={range} id="" />
         <input type="datetime-local" onChange={handleDateTime} name="" id="" />
          
         <button onClick={handleSubmit}>Submit</button>
