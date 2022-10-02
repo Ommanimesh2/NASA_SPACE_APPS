@@ -29,6 +29,10 @@ The images used for display are taken from the database of WISPR. The Wide-Field
 The dataset can be found at `https://wispr.nrl.navy.mil/data/rel/pngs/`.
 These are directly fetched from the above url.
 
+### Design
+
+The figma file containing design can be found at [PSP Design](https://www.figma.com/file/wpVsmiI5zbAhBLyyNa5TGm/Untitled?node-id=0%3A1)
+
 ## Contributors
 
 * Omm Animesh Mishra [@Ommanimesh2](https://github.com/Ommanimesh2)
