@@ -1,5 +1,7 @@
 # Solar Probe Reimagined
 
+The web-application is hosted [here](https://ommanimesh2.github.io/NASA_SPACE_APPS/). Please check it out :)
+
 An interactive web application to take you aboard the Parker Solar Probe. What is Parker Solar Probe? A scientific mission to unlock the mysteries of the Sun's corona and solar wind. It studies the corona and solar winds as it goes around a revolution of 88 days and comes as close to Sun as any spacecraft has ever been.
 
 ## Installation and Run
