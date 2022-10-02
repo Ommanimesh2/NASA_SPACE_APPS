@@ -1,12 +1,12 @@
 import React from 'react'
 
-const odometer = () => {
+const Odometer = () => {
   return (
     <div>
       odometer
-      
+
     </div>
   )
 }
 
-export default odometer
+export default Odometer

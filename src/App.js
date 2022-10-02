@@ -1,38 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
-import {useState } from 'react'
-
+import {useContext, useEffect, useState} from 'react'
+import dataContext from './datacontext';
+import SolarSunDisplay from './components/SolarSunDisplay/SolarSunDisplay';
+import ControlPanel from './components/ControlPanel/ControlPanel';
+import Dashboard from './components/Dashboard/Dashboard';
 function App() {
-  const [div,setdiv]=useState('')
-  const [data,setData]=useState([])
+  const {globalData,setGlobalData}=useContext(dataContext)
 
+  const thids="sadf"
+useEffect(()=>{
+ handleData()
+},[thids])
   const handleData=async ()=>{
-const l=await fetch("https://firestore.googleapis.com/v1/projects/psp-data-57891/databases/(default)/documents/psp_data")
-const newData=await l.json()
-setData(newData)
-console.log(newData);
-console.log(newData.nextPageToken);
-}
-  
-  const parent =(e)=>{
-setdiv(e.target)
+    const response=await fetch("https://firestore.googleapis.com/v1/projects/psp-data-57891/databases/(default)/documents/psp_data")
+    const newData=await response.json()
+    setGlobalData(newData)
   }
-const handleclick=(e)=>{
-  console.log(e.target);
-e.target.style.backgroundImage="url(https://svs.gsfc.nasa.gov/vis/a030000/a030300/a030362/euvi_aia304_2012_carrington_print.jpg)"
-div.style.height="450px"
-div.style.width="450px"
-div.style.top="40vh"
-div.style.bottom="45vw"
-}
+
+  
+if(globalData.length!=0){
+
   return (
     <>
-    <button onClick={handleData}>click</button>
-    <div onClick={parent} className="earth">
-    <div onClick={handleclick}></div>
-  </div>
+   <SolarSunDisplay/>
+   <ControlPanel gData={globalData}/>
+   {/* <Dashboard/> */}
     </>
   );
+} else{
+  <>loading</>
+}
 }
 
 export default App;

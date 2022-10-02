@@ -1,4 +1,4 @@
-#root{
+/* #root{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -37,7 +37,7 @@
   height: 100%;
   animation: spin 15s linear infinite;
   background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5TZIq2egIWi0JBOL2r3YI8ZrER8V85E0jaeFfx0M6&s);
-  /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
+  orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg
   background-size: cover;
   transition: 15s;
 }
@@ -50,4 +50,4 @@
   to {
       transform: translateX(-50%);
   }
-}
+} */
