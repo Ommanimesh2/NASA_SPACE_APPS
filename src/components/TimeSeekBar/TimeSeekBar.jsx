@@ -10,18 +10,22 @@ const TimeSeekBar = ({gData}) => {
       setRange(e.target.value)
 
    }
+   const diffHours = (xTime, yTime) => {
+  
+    let diff = Math.abs(new Date(xTime).getTime() - new Date(yTime).getTime()) / 3600000;
+    return diff;
+}
    const handleDateTime=(e)=>{
      const baseDate="2018-10-01T00:00:00.000Z"
-     const baseDateObj=new Date("2018-10-01T00:00:00.000Z")
-      const first=baseDate.split('T')
-      const second=first[0].split('-')
-      //  const baseParam=
-    //  const dat=new Date(e.target.value);
+     
+    const inputDate=e.target.value
+    console.log(inputDate);
+    setRange(Math.floor(diffHours(baseDate, inputDate)));     
 
-    //  console.log(dat.getHours());
+  
    }
    const handleSubmit= async()=>{
-    const resposnse=await fetch(`https://psp-data-organized-default-rtdb.asia-southeast1.firebasedatabase.app/${range}.json`)
+    const resposnse=await fetch(`https://parker-solar-probe-data-default-rtdb.asia-southeast1.firebasedatabase.app/${range}.json`)
     const resp=await resposnse.json()
     setGlobalData(resp)
     setOn(true)
@@ -32,7 +36,10 @@ const TimeSeekBar = ({gData}) => {
   
    return (
     <div className='timeseekbar'>
-        <input className='range' type="range" name="range" id="myProgressBar" min="0" max="30670" onChange={handleChange}/>
+        <input className='range' type="range"  name="range" id="myProgressBar" min="0" max="30670" onChange={(e)=>{
+          handleChange(e)
+          handleSubmit(e)
+        }}/>
         <input className='text' type="text" name=""  value={range} id="" />
         <input type="datetime-local" onChange={handleDateTime} name="" id="" />
          

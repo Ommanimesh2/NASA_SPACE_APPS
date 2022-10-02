@@ -6,6 +6,7 @@ import { useContext } from 'react'
 import DashToggle from '../SlidingButtons/DashToggle'
 import dataContext from '../../datacontext'
 import './controlpanel.css'
+import OtherToggle from '../SlidingButtons/OtherToggle'
 
 const ControlPanel = () => {
 
@@ -16,7 +17,7 @@ return (
       
       <Odometer/>
       <SpeedoMeter/>
-      <DashToggle/>
+      <OtherToggle/>
       <TimeSeekBar/>
     </div>
   )

@@ -3,7 +3,8 @@ import dataContext from '../../datacontext'
 import './dashboard.css'
 const Dashboard = () => {
   const {globalData,setGlobalData}=useContext(dataContext)
-  
+  const formattedTime= new Date(globalData.Time)
+  const useTime=formattedTime.toLocaleDateString()+" "+formattedTime.toLocaleTimeString()
   return (
     <div className='dashboard slide-left'>
       <div className="image">
@@ -13,7 +14,7 @@ const Dashboard = () => {
        B
       <div className="B">{globalData.B}</div>
       Time
-      <div className="Time">{globalData.Time}</div>
+      <div className="Time">{useTime}</div>
       flowlon
       <div className="flowlon">{globalData.flowlon}</div>
       heliographicLatitude

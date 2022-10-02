@@ -40,11 +40,7 @@
     background-size: cover;
     transition: 1s;
   }
-  .thing{
-    background: url(https://svs.gsfc.nasa.gov/vis/a030000/a030300/a030362/euvi_aia304_2012_carrington_print.jpg);
-  
-  }
-  
+
   @keyframes spin {
     to {
         transform: translateX(-50%);
