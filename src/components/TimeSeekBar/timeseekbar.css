@@ -9,6 +9,9 @@
 
 
 }
+#that{
+    display: none;
+}
 .range{
     width: 700px;
 }

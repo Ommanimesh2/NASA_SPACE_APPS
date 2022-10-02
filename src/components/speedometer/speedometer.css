@@ -1,0 +1,26 @@
+.arcclass{
+    position: absolute;
+    top: 90px;
+    left: 80px;
+}
+.arcclass img{
+position: relative;
+width: 200px;
+left: 30px;
+}
+.needle{
+ 
+    position: relative;
+    right: 78px;
+}
+.center{
+    position: relative;
+    left: -142px;
+    
+
+}
+.speed{
+    position: relative;
+    left: 110px;
+    font-weight: bolder;
+}
