@@ -1,4 +1,4 @@
-# Solar Probe Reimagine
+# Solar Probe Reimagined
 
 An interactive web application to take you aboard the Parker SOlar Probe. What is Parker Solar Probe? A scientific mission to unlock the mysteries of the Sun's corona and solar wind. It studies the corona and solar winds as it goes around a revolution of 88 days and comes as close to Sun as any spacecraft has ever been.
 
@@ -28,3 +28,11 @@ However, since we have limits on number of calls we have a deployable backend fo
 The images used for display are taken from the database of WISPR. The Wide-Field Imager for Solar Probe (WISPR) is an imaging instrument of the Parker Solar Probe mission to the Sun, launched in August 2018. Imaging targets include visible light images of the corona, solar wind, shocks, solar ejecta, etc.
 The dataset can be found at `https://wispr.nrl.navy.mil/data/rel/pngs/`.
 These are directly fetched from the above url.
+
+## Contributors
+
+* Omm Animesh Mishra [@Ommanimesh2](https://github.com/Ommanimesh2)
+* Nishkarsh Jain [@NanoNish](https://github.com/NanoNish)
+* Abhijna Raghavendra [@abhijna-raghavendra](https://github.com/abhijna-raghavendra)
+* Anaisha Mehta [@Anaisha12](https://github.com/Anaisha12)
+* Priyanshu Mehra [@Priyanshu_M](https://github.com/Priyanshu95663)
