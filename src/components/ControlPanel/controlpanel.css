@@ -1,0 +1,10 @@
+.controlpanel{
+    position: absolute;
+    background: url('../../assets/dash.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 30vh;
+    bottom: 0;
+    
+}

@@ -1,0 +1,48 @@
+.solarsundisplay{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    height: 100vh;
+  }
+  .earth {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 50px;/* 50-300*/
+    bottom: 0;
+    margin: auto;
+    right:0;
+    
+    overflow: hidden;
+    border-radius: 50%;
+    transition: 1s;
+    box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+  }
+  
+  .earth:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: -20px -20px 50px 2px #000 inset;
+    border-radius: 50%;
+  } 
+  .earth > div {
+    width: 200%;
+    height: 100%;
+    animation: spin 15s linear infinite;
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5TZIq2egIWi0JBOL2r3YI8ZrER8V85E0jaeFfx0M6&s);
+    /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
+    background-size: cover;
+    transition: 1s;
+  }
+
+  @keyframes spin {
+    to {
+        transform: translateX(-50%);
+    }
+  }
