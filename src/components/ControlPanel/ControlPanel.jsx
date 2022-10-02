@@ -3,20 +3,21 @@ import Odometer from '../odometer/Odometer'
 import SpeedoMeter from '../speedometer/SpeedoMeter'
 import TimeSeekBar from '../TimeSeekBar/TimeSeekBar'
 import { useContext } from 'react'
+import DashToggle from '../SlidingButtons/DashToggle'
 import dataContext from '../../datacontext'
-const ControlPanel = ({gData}) => {
+import './controlpanel.css'
+const ControlPanel = () => {
 
 
-if(gData)
-{ return (
-    <div>
+
+return (
+    <div className='controlpanel'>
       <Odometer/>
       <SpeedoMeter/>
-      <TimeSeekBar gData={gData}/>
+      <DashToggle/>
+      <TimeSeekBar/>
     </div>
-  )} else{
-    <>this is comedy</>
-  }
+  )
 }
 
 export default ControlPanel

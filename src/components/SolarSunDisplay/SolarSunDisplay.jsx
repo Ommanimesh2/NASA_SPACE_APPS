@@ -3,31 +3,34 @@ import dataContext from '../../datacontext'
 import { useContext } from 'react'
 import './solarsundisplay.css'
 const SolarSunDisplay = () => {
-    const {globalData,setGlobalData}=useContext(dataContext)
-    const [div,setdiv]=useState('')
-    const gif=()=>{
-      
+    const {globalData,setGlobalData,on}=useContext(dataContext)
+    const [fromTop,setFromTop]=useState(0)
+
+    const radial=globalData.radialDistance
+    console.log(radial);
+
+    const parentStyle={
+      height:`${150+150*radial}px`,
+      width:`${150+150*radial}px`,
+      top:`${50+150*radial}px`, 
     }
-    const parent =(e)=>{
-        setdiv(e.target)
-        }
-        const handleclick=(e)=>{
-          gif()
-          console.log(e.target);
-          e.target.style.backgroundImage="url(https://svs.gsfc.nasa.gov/vis/a030000/a030300/a030362/euvi_aia304_2012_carrington_print.jpg)"
-        div.style.height="450px"
-        div.style.width="450px"
-        div.style.top="40vh"
-        div.style.bottom="45vw"
-        }
-  return (
+    const earthStyle={
+    backgroundImage:"url(https://svs.gsfc.nasa.gov/vis/a030000/a030300/a030362/euvi_aia304_2012_carrington_print.jpg)",
     
+  }
+ 
+        
+  return (
+    on ? 
     <>
 
-    <div onClick={parent} className="earth">
-      <div onClick={handleclick}></div>
+    <div style={parentStyle} className="earth">
+      <div style={earthStyle} ></div>
     </div>
-    </>
+    </> :
+       <div className="earth">
+       <div></div>
+     </div>
   )
 }
 
