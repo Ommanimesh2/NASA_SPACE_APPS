@@ -1,0 +1,32 @@
+.gauge{
+    position: absolute;
+    top: 96px;;
+    left:108px;
+    width:200px;
+}
+.needle{
+    position:relative;
+    top: 87px;;
+    left:-444px;
+    /* transform: rotate(-90deg); */
+}
+.speed{
+    width:auto;
+    position:relative;
+    top:154px;
+    left:-946px;
+}
+.container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contain{
+    width:50px;
+}
+.center{
+    position: absolute;
+    top: 171px;
+    left: 184px;
+   
+}
