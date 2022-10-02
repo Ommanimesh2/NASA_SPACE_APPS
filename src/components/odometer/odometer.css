@@ -1,0 +1,28 @@
+.odometer{
+
+    position: absolute;
+    right: 60px;
+    top: 100px;
+
+}
+.gauge1{
+    width: 200px;
+    right: 30px;
+}
+.needle1{
+    position: relative;
+    right: 112px;
+    bottom: 10px;
+}
+.center1{
+    position: relative;
+    right:176px;
+    bottom: 10px;
+}
+.speed1{
+    position: relative;
+    left: 85px;
+    font-weight: bolder;
+    bottom: 7px;
+
+}

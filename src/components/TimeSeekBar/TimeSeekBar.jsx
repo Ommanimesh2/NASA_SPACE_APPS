@@ -8,6 +8,7 @@ const TimeSeekBar = ({gData}) => {
     const {param,setParam}=useState(0)
     const handleChange=(e)=>{
       setRange(e.target.value)
+      e.target.value=range
 
    }
    const diffHours = (xTime, yTime) => {
@@ -25,22 +26,26 @@ const TimeSeekBar = ({gData}) => {
   
    }
    const handleSubmit= async()=>{
-    const resposnse=await fetch(`https://parker-solar-probe-data-default-rtdb.asia-southeast1.firebasedatabase.app/${range}.json`)
-    const resp=await resposnse.json()
-    setGlobalData(resp)
-    setOn(true)
-    console.log(resp);
+    if(range>30670){
+      alert("Data not available for the specified date range")
+      setRange(0)
+    } else{
+      const resposnse=await fetch(`https://parker-solar-probe-data-default-rtdb.asia-southeast1.firebasedatabase.app/${range}.json`)
+      const resp=await resposnse.json()
+      setGlobalData(resp)
+      setOn(true)
+      console.log(resp);
+    }
   }
 
-
-  
+ 
    return (
     <div className='timeseekbar'>
         <input className='range' type="range"  name="range" id="myProgressBar" min="0" max="30670" onChange={(e)=>{
           handleChange(e)
           handleSubmit(e)
-        }}/>
-        <input className='text' type="text" name=""  value={range} id="" />
+        }} value={range}/>
+        <input className='text' type="text" name=""  value={range} id="that" />
         <input type="datetime-local" onChange={handleDateTime} name="" id="" />
          
         <button onClick={handleSubmit}>Submit</button>

@@ -17,8 +17,11 @@ return (
       
       <Odometer/>
       <SpeedoMeter/>
+      <div className="another">
+
       <OtherToggle/>
       <TimeSeekBar/>
+      </div>
     </div>
   )
 }
